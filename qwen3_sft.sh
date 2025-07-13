@@ -33,6 +33,4 @@ torchrun \
     --use_liger_kernel \
     --use_fp8 \
     --torch_compile
-
     # --fsdp "full_shard auto_wrap"
-    # --use_packing
