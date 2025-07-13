@@ -1,22 +1,24 @@
-# Turbo-Tune 🚀
+# Qwen3-MoE Fast SFT 🚀
 
-A high-performance MoE (Mixture of Experts) finetuning framework optimized for ultimate training efficiency. This project implements cutting-edge techniques to maximize training speed and reduce memory usage for large language models.
+A high-performance Supervised Fine-Tuning (SFT) framework specifically optimized for Qwen3-MoE models. This project implements cutting-edge techniques to maximize training speed and reduce memory usage for efficient Qwen3-MoE fine-tuning.
 
 ## 🎯 Key Features
 
-- **Ultra-fast MoE training** with optimized scatter operations
+- **Ultra-fast Qwen3-MoE SFT** with optimized scatter operations
 - **Multiple precision formats** (FP8, BF16) for memory efficiency
 - **Advanced distributed training** with DeepSpeed ZeRO and FSDP
 - **Kernel optimizations** with Liger Kernel and Flash Attention
 - **Comprehensive efficiency monitoring** with real-time metrics
+- **Qwen3-MoE specific optimizations** for maximum performance
 
 ## 🛠️ Efficiency Technologies
 
-### 1. **Fast MoE Implementation**
-- **ScatterMoE**: Custom implementation of scatter operations for MoE blocks
+### 1. **Fast Qwen3-MoE Implementation**
+- **ScatterMoE**: Custom implementation of scatter operations for Qwen3-MoE blocks
 - **Parallel Expert Computation**: Optimized parallel matrix multiplications across experts
 - **Load Balancing**: Auxiliary loss for router load balancing
 - **Memory-Efficient Routing**: Sorted expert indices and padded block operations
+- **Qwen3-MoE Specific**: Tailored optimizations for Qwen3-MoE architecture
 
 ### 2. **Precision Optimization**
 - **FP8 Training**: 8-bit floating point precision using PyTorch AO (Accelerated Optimization)
@@ -62,8 +64,8 @@ A high-performance MoE (Mixture of Experts) finetuning framework optimized for u
 ## 📁 Project Structure
 
 ```
-turbo-tune/
-├── qwen3_sft.py              # Main training script
+qwen3-moe-fast-sft/
+├── qwen3_sft.py              # Main Qwen3-MoE SFT training script
 ├── qwen3_sft.sh              # Single-node training script
 ├── qwen3_sft_multinode.sh    # Multi-node training script
 ├── callback.py               # Efficiency monitoring callback
@@ -73,7 +75,7 @@ turbo-tune/
 │   ├── zero2.json           # DeepSpeed ZeRO-2 config
 │   └── zero3.json           # DeepSpeed ZeRO-3 config
 └── monkey_patch/            # Optimized implementations
-    ├── fast_moe.py          # Fast MoE block implementation
+    ├── fast_moe.py          # Fast Qwen3-MoE block implementation
     ├── fp8.py               # FP8 training patches
     ├── sft_trainer.py       # Optimized SFT trainer
     └── scattermoe/          # Scatter operations
@@ -151,7 +153,8 @@ For GPU support, ensure you have CUDA installed and use the appropriate PyTorch 
 
 ## 📈 Performance Benefits
 
-- **2-3x faster training** with optimized MoE operations
+- **2-3x faster Qwen3-MoE SFT** with optimized operations
 - **50-70% memory reduction** with FP8 and distributed training
 - **Improved throughput** with kernel optimizations
 - **Better convergence** with advanced scheduling and loss functions
+- **Qwen3-MoE specific speedups** through tailored optimizations
